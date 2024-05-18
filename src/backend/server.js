@@ -8,14 +8,14 @@ const Event = require('./models/Event');
 const Participant = require('./models/Participant');
 
 const PORT = 5000;
-const URL = 'mongodb+srv://sydorenko867:Pass321@cluster0.nol53uo.mongodb.net/eventsapp?retryWrites=true&w=majority&appName=Cluster0';
+const dbURL = process.env.MONGODB_URI || 'mongodb+srv://sydorenko867:Pass321@cluster0.nol53uo.mongodb.net/eventsapp?retryWrites=true&w=majority&appName=Cluster0';
 
 const app = express();
 app.use(express.json());
 app.use(cors());
 
 mongoose
-    .connect(URL, { useNewUrlParser: true, useUnifiedTopology: true })
+    .connect(dbURL, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('Connected to MongoDB'))
     .catch(err => console.log(`DB connection error: ${err}`));
 
