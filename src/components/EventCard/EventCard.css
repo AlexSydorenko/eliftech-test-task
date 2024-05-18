@@ -1,0 +1,39 @@
+.event-card-wrapper {
+    width: 270px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    border: 1px solid #fff;
+
+    transition: all .3s ease;
+}
+
+.event-card-wrapper:hover {
+    box-shadow: none;
+    border: 1px solid #000;
+}
+
+.event-title {
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.event-card-btns {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.event-card-btns button {
+    cursor: pointer;
+    font-weight: 500;
+    color: blue;
+    background-color: #fff;
+    border: none;
+    border-bottom: 2px dotted blue;
+}
